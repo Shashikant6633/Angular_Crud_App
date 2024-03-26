@@ -1,0 +1,78 @@
+<!-- Angular replaces {{ title }} with the value of the title property defined in the component class.This creates a one-way binding from the component class to the template,
+where changes in the component class automatically reflect in the template. -->
+
+<p>item-list works!</p>
+
+<!-- Interpolation Binding -->
+<h1>{{ title }}</h1>
+
+<!-- *ngFor Directive -->
+<ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+ 
+<hr>
+ 
+<!-- Property Binding (One-Way Binding) -->
+<!-- <button [disabled]="isDisabled">Toggle Disabled</button>
+ 
+<hr> -->
+ 
+<!-- Event Binding -->
+<h1>{{ title1 }}</h1>
+<button (click)="incrementCounter()">Increment Counter</button>
+<p>Counter: {{ counter }}</p>
+ 
+<hr>
+ 
+<!-- DatePipe Example -->
+<h2>Date: </h2><p>{{ creationDate | date }}</p>
+ 
+<hr>
+ 
+<!-- UpperCasePipe Example -->
+<h1>{{ title | uppercase }}</h1>
+ 
+<hr>
+ 
+<!-- CurrencyPipe Example -->
+<p>Price: {{ price | currency }}</p>
+ 
+<hr>
+<p>Creation Date: {{ creationDate | date }}</p>
+ 
+<h2>{{ title | uppercase }}</h2>
+ 
+<p>Price: {{ price | currency }}</p>
+<!-- Custom TruncatePipe Example -->
+<ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+
+
+
+<div>
+      <h2>Finding the Largest Number</h2>
+      <div>
+        <label>Number 1:</label>
+        <input type="number" [(ngModel)]="num1">
+      </div>
+      <div>
+        <label>Number 2:</label>
+        <input type="number" [(ngModel)]="num2">
+      </div>
+      <div>
+        <label>Number 3:</label>
+        <input type="number" [(ngModel)]="num3">
+      </div>
+      <button (click)="findLargest()">Find Largest</button>
+      <div *ngIf="largestNumber !== null">
+        <p>The largest number is: {{ largestNumber }}</p>
+      </div>
+    </div>
+
+
+    <h3>Child Component</h3>
+    <p>{{ message }}</p> 
+
+    <button (click)="emitEvent()">Click me</button>
